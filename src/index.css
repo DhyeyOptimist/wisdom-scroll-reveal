@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -101,5 +102,28 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
+
+/* Classical animations for the Words of Wisdom app */
+@layer utilities {
+  .animate-fade-in {
+    animation: classicalFadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes classicalFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(180, 83, 9, 0.1);
   }
 }
